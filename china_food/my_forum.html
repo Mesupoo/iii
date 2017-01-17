@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的论坛</title>
+    <link rel="icon" href="images/ff_ico.png" type="image/x-icon"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my_forum.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="head_php">
+    <header>
+        <div class="fr">
+            <a id="login" href="#">登录</a>
+            <a id="regist" href="#">注册</a>
+            <div id="my_resume">
+                <a href="#">
+                    <span></span>
+                </a>
+                <ul>
+                    <li><a href="my_resume.html">我的主页</a></li>
+                    <li><a> 设 置 </a></li>
+                    <li><a class="my_resume_exit" href=""> 退 出 </a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="clear_float"></div>
+        <div id="head">
+            <div class="fl">
+                <a href="index.html"><img src="images/ff.png"/></a>
+                <P class="fr">DISCOVER FOOD<br>&nbsp;&nbsp;&nbsp;JUST DO IT!</P>
+            </div>
+            <!--搜索功能-->
+            <div class="fr">
+                <input id="input_search" required/><button id="btn_search"></button>
+            </div>
+            <div class="search"></div>
+            <div class="search_panel">
+                <h3>搜索结果</h3>
+                <ul id="search_result">
+                    <!--<li>-->
+                    <!--<img src="images/img_food/food_chuan/gongbaojiding.jpg" alt="">-->
+                    <!--<span>宫爆鸡丁</span>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <!---------------------------------------------------------------->
+        </div>
+    </header>
+    <hr>
+    <nav>
+        <ul id="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="food_all.html">全部美食</a></li>
+            <li><a href="my_forum.html">论坛</a></li>
+            <li><a href="my_resume.html">个人中心</a></li>
+            <li><a href="about_us.html">关于我们</a></li>
+        </ul>
+    </nav>
+    <div class="login">
+        <span class="dialog_close">×</span>
+        <div class="login_box">
+            <div class="login_top">
+                <h4>加入美食网</h4>
+                <h5>去寻找属于你的那份美····食</h5>
+                <p class="dialog_alert1"></p>
+            </div>
+            <form id="login_form">
+                <div class="login_user_name">
+                    <input id="login_name" type="text" name="login_name" placeholder="用户名" autofocus="autofocus">
+                    <label id="require_name1" class="require_name ishidden">请填写用户名</label>
+                </div>
+                <div class="login_user_upwd">
+                    <input id="login_upwd" type="password" name="login_upwd" placeholder="密码">
+                    <label id="require_upwd1" class="require_upwd ishidden">请填写密码</label>
+                </div>
+                <div class="login_button"><input id="btn_login" type="button" value="登  录"></div>
+            </form>
+            <label class="login_remeber_me"><input type="checkbox" name="remeber_me" value="true" checked>记住我</label>
+        </div>
+    </div>
+    <div class="register">
+        <span class="dialog_close">×</span>
+        <div class="register_box">
+            <div class="register_top">
+                <h4>加入美食网</h4>
+                <h5>去寻找属于你的那份美····食</h5>
+                <p class="dialog_alert"></p>
+            </div>
+            <form id="register_form">
+                <div class="register_user_name">
+                    <input id="register_name" type="text" name="register_name" autofocus="autofocus" placeholder="用户名"
+                           autocomplete="off">
+                    <label id="require_name" class="require_name ishidden">请填写用户名</label>
+                </div>
+                <div class="register_user_upwd">
+                    <input id="register_upwd" type="password" name="register_upwd" placeholder="密码不得少于6位">
+                    <label id="require_upwd" class="require_upwd ishidden">请填写密码</label>
+                </div>
+                <div class="register_button"><input id="btn_register" type="button" value="注  册"></div>
+            </form>
+            <div class="already_id"><span>已有账号？</span><a href="#">登录</a></div>
+        </div>
+    </div>
+</div>
+<!----------------------------------以上内容为header----------------------------->
+<!----------------------------------以下内容为主题----------------------------->
+<div class="forum_content">
+    <ul class="forum_content_top">
+        <li><a class="forum_question" href="#"><i></i>提问</a></li>
+        <li><a class="forum_response" href="#"><i></i>回答</a></li>
+        <li><a class="forum_article" href="#"><i></i>写文章</a></li>
+    </ul>
+    <section class="forum_selection"><i></i><span>全部动态</span></section>
+    <ul class="forum_content_middle">
+        <!--<li class="forum_content_list">-->
+            <!--<dt class="forum_content_title"><a href="#">小明</a>：宫爆鸡丁好吃！！！！！！！</dt>-->
+            <!--<dd class="forum_content_article">-->
+                <!--Lorem ipsum dolor sit amet, consectetur adipisicing-->
+            <!--</dd>-->
+        <!--</li>-->
+    </ul>
+    <div class="question">
+        <span id="question_exit" class="fr">退&nbsp;&nbsp;出</span>
+        <div class="question_panel">
+            <span>写文章</span>
+            <a id="publish" class="fr" href="#">发&nbsp;&nbsp;布</a>
+            <input type="text" id="question_title" placeholder="请输入标题" autofocus="autofocus" required>
+            <hr>
+            <textarea rows="15" id="question_content" required placeholder="请输入正文"></textarea>
+        </div>
+    </div>
+</div>
+<div id="foot_php"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/register_login.js"></script>
+<script type="text/javascript" src="js/my_forum.js"></script>
+</body>
+</html>

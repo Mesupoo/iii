@@ -1,0 +1,50 @@
+.content_middle{
+    font: 20px 'Lora' ,serif;
+    width:1010px;
+    margin:30px auto;
+}
+.content_middle:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.content_nav{
+    height: 440px;
+    width: 205px;
+    text-align: center;
+}
+.content_section{
+    width:805px;
+    text-align: center;
+}
+.content_nav span{
+    cursor: pointer;
+    margin-bottom:20px;
+    position: relative;
+    line-height:60px;
+    color: #666;
+    font-weight:700;
+    font-size:20px;
+    display: block;
+    height: 60px;
+    width: 200px;
+    border:1px solid #eee;
+    box-shadow: 0 0 1px 0 rgba(128,128,128,.5);
+}
+.content_nav>div:hover >span{
+    top:-10px;
+    box-shadow:0 0 15px 0 rgba(128,128,128,.9);
+}
+.my_collection>li{
+    float: left;
+    margin:0 0 20px 51px;
+}
+.my_forum>li{
+    border-top:1px solid #d3d3d3;
+    padding:15px;
+}
+.my_forum>li>p{
+    font-weight:700;
+    margin-bottom:10px;
+    text-align: left;
+}
