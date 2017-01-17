@@ -1,0 +1,543 @@
+/*重置*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,b,a{color: #666;-webkit-font-smoothing: subpixel-antialiased;margin:0;padding:0;-moz-user-select:none;//禁止复制文本}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+abbr,acronym{border:0;}
+body{ background-color:#fff;font:14px 'Helvetica Neue',Helvetica,Arial,sans-serif;}
+a,button,input{outline:0;text-decoration: none;}
+i{font-size:16px;text-decoration:none;}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clear_float{
+	clear:both;
+}
+/******************************************************************************************/
+/******************搜索界面*/
+.search{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:transparent;
+	z-index: 500;
+}
+.search_panel{
+	display: none;
+	background:white;
+	position: absolute;
+	width:800px;
+	height:500px;
+	top:50%;
+	left:50%;
+	z-index:999;
+	margin-left:-400px;
+	margin-top:-250px;
+	box-shadow: 0 0 15px gray;
+	border-radius:10px;
+	padding:20px;
+	overflow: auto;
+}
+.search_panel h3{
+	text-align: center;
+	font-size:30px;
+	font-family:'华文隶书';
+	color: black;
+}
+.search_panel>ul>li{
+	height:200px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.search_panel>ul>li>img{
+	height:150px;
+	width:150px;
+	display: inline-block;
+	border-radius:10px;
+	vertical-align: middle;
+}
+.search_panel>ul>li>span{
+	font-size:30px;
+	font-weight:700;
+	color: #000;
+	padding-left:30px;
+	font-family: '方正舒体';
+}
+
+/******************login界面*/
+.login{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index: 99;
+	background: rgba(255, 255, 255, .8);
+}
+.login_box{
+	background: white;
+	color: #787878;
+	font-size: 14px;
+	text-align: center;
+	height:300px;
+	width:290px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-145px;
+	margin-top:-355px;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.3);
+	transform:translateY(100px);
+}
+@keyframes opi {
+	 from{  opacity:0;transform: translateY(0px);}
+	 to{  opacity:1;transform : translateY(100px);transition :transform 1s linear}
+}
+@keyframes opi_success {
+	from{  opacity:1;}
+	to{  opacity:0;}
+}
+.login_box>div>h4{
+	margin-top:31px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height:18px;
+	color:#787878;
+}
+.login_box>div>h5{
+	font-weight:400;
+	color:#787878;
+}
+.login_top{
+	height:70px;
+	line-height:2;
+}
+.login_user_name,.login_user_upwd{
+	box-sizing:border-box;
+	height:50px;
+	line-height:50px;
+	border-top:1px solid #eee;
+}
+.login_user_upwd{
+	border-bottom:1px solid #eee;
+}
+.login_user_upwd>input,.login_user_name>input{
+	display: inline-block;
+	box-sizing:border-box;
+	padding-left:8px;
+	width:100%;
+	height:20px;
+	border:0;
+	outline:0;
+	word-wrap: break-word;
+}
+.login_button>input{
+	width:100%;
+	height:34px;
+	margin-top:12px;
+	display: inline-block;
+	background-color: #0077d9;
+	line-height: 1;
+	color: #fff;
+	border: 0;
+	border-radius: 3px;
+	outline: 0;
+	cursor: pointer;
+}
+.login_button>input:hover{
+	background-color:#0070cd;
+}
+.login_remeber_me{
+	margin-top: 15px;
+	display: block;
+}
+/****register************************************************/
+.register{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index: 99;
+	color:#787878;
+	background: rgba(255, 255, 255, .8);
+}
+.register_box{
+	background: white;
+	font-size: 14px;
+	text-align: center;
+	height:300px;
+	width:290px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-145px;
+	margin-top:-155px;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.3);
+	transform: translateY(-100px);
+}
+@keyframes opii {
+	from{  opacity:0;transform: translateY(0px);}
+	to{  opacity:1;transform : translateY(-100px);transition :transform 1s linear}
+}
+.register_box>div>h4{
+	margin-top:31px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height:18px;
+	color:#787878;
+}
+.register_box>div>h5{
+	font-weight:400;
+	color:#787878;
+}
+.register_top{
+	height:70px;
+	line-height:2;
+}
+.register_user_name,.register_user_upwd{
+	box-sizing:border-box;
+	height:50px;
+	line-height:50px;
+	border-top:1px solid #eee;
+}
+.register_user_upwd{
+	border-bottom:1px solid #eee;
+}
+.register_user_upwd>input,.register_user_name>input{
+	display: inline-block;
+	box-sizing:border-box;
+	padding-left:8px;
+	width:100%;
+	height:20px;
+	border:0;
+	outline:0;
+	word-wrap: break-word;
+}
+.register_button>input{
+	width:100%;
+	height:34px;
+	margin-top:12px;
+	display: inline-block;
+	background-color: #0077d9;
+	line-height: 1;
+	color: #fff;
+	border: 0;
+	border-radius: 3px;
+	outline: 0;
+	cursor: pointer;
+}
+.register_button>input:hover{
+	background-color:#0070cd;
+}
+.already_id{
+	 margin-top:15px;
+ }
+.already_id>a{
+	color: #0077d9;
+}
+/*************登录注册公共部分******************************/
+.require_name{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-47px;
+	margin-left:40px;
+	color:red;
+}
+.require_upwd{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:0;
+	margin-left:40px;
+	color:red;
+}
+.ishidden{
+	display: none;
+}
+.isblock{
+	display: inline-block;
+}
+/******右上角关闭按钮********/
+.dialog_close{
+	font-size:60px;
+	position: absolute;
+	right:5%;
+	top:30px;
+	cursor:pointer;
+}
+.dialog_close:hover{
+	color: #FF645B;
+}
+/*******提示注册成功*********/
+.dialog_alert,.dialog_alert1{
+	color: #ff645b;
+}
+/**************************************************************/
+#my_resume{
+	display: none;
+	width:100px;
+	position: relative;
+}
+#my_resume>a{
+	overflow: hidden;
+	border:1px solid #666;
+	border-radius:3px;
+	display: block;
+	font-weight:bold;
+	width:100px;
+	height:24px;
+	text-align: center;
+	line-height:20px;
+	background: gray;
+	color:white;
+	/*自动换行*/
+	word-wrap:break-word;
+	word-break:break-all;
+}
+#my_resume>ul{
+	width:100px;
+	position: absolute;
+	display: none;
+	text-align: center;
+}
+#my_resume>ul>li{
+	border-radius:3px;
+	color: #fff;
+	width:100px;
+	height:24px;
+	background: gray;
+	cursor: pointer;
+}
+#my_resume>ul>li:hover{
+	background: #fff;
+	color:gray;
+}
+#my_resume>ul>li:hover >a{
+	color: gray;
+}
+#my_resume>ul>li>a{
+	color: #fff;
+}
+#my_resume:hover > ul{
+	display: block;
+}
+/***************************body********************************/
+body{width:1348px;}
+header{
+	width:1348px;
+	height:100px;
+}
+header>div:first-child{
+	margin-right:160px;
+}
+header>.fr>a{
+	font-weight:bold;
+	margin-right:20px;
+}
+header>.fr>a:hover{
+	color:red;
+}
+#head{
+	margin:10px auto;
+	width:800px;
+}
+#head:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+#head>div>img{
+	cursor:pointer;
+}
+#head>div>P{
+	font-weight:bold;
+	line-height:1.2em;
+	height:30px;
+	color:#333;
+	border-left:2px solid #333;
+	padding-left:5px;
+	padding-top:2px;
+}
+#input_search{
+	height:30px;
+	width:125px;
+	vertical-align:top;
+	border:2px solid black;
+	border-right:0;
+	padding-left:12px;
+	border-radius:20px 0 0 20px;
+}
+#btn_search{
+	outline:0;
+	cursor:pointer;
+	border:2px solid black;
+	border-left:0;
+	background:url(../images/search.png) no-repeat 50% 50%;
+	height:34px;
+	width:40px;
+	border-radius:0 20px 20px 0;
+}
+hr{
+	margin:0 auto;
+	width:1010px;
+}
+/**********************nav****************/
+nav{
+	margin:0 auto;
+	width: 1010px;
+	height: 50px;
+	}
+#nav>li{
+	float:left;
+}
+#nav>li>a{
+	display:inline-block;
+	height:46px;
+	width:202px;
+	text-align:center;
+	line-height:46px;
+	font-weight:bold;
+	font-size:16px;
+	color:gray;
+}
+#nav>li>a:hover{
+	color:black;
+	background:#aaa;
+}
+/******************滑动模块见carousel.css************************/
+/******************中华历史介绍**********************/
+.food_introduce{
+	width:1010px;
+	margin:60px auto;
+}
+.food_introduce:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+.food_title{
+	font-size:25px;
+	color:brown;
+}
+.food_title+b{
+	padding-left:10px;
+	padding-top:15px;
+}
+.food_txt{
+	height:870px;
+	width:700px;
+	line-height:2em;
+	font-size:14px;
+}
+.food_photo{
+	width:270px;
+	border:1px solid #DDD;
+	border-radius:5px;
+	box-shadow:2px 2px 5px gray;
+}
+.food_photo_set>img{
+	height:270px;
+	width:270px;
+	display:block;
+}
+#btn_food_photo{
+	height:40px;
+	width:270px;
+	color:#666;
+	cursor:pointer;
+	box-sizing:border-box;
+	font-size:20px;
+	border-style:none;
+	text-align:left;
+	padding-left:30px;
+	background: white url(../images/btn_food_photo.png) no-repeat 2% center;
+}
+.food_info{
+	margin-top:20px;
+	width:350px;
+	border-bottom:2px dotted #BCC5CC;
+	padding-bottom:20px;
+}
+.food_info>dt{
+	display:inline-block;
+	font-weight:bold;
+	box-sizing:border-box;
+}
+.food_info>dd{
+	padding-left:50px;
+}
+/******************参考文献**********************/
+.refer_doc{
+	margin-top:30px;
+}
+.refer_doc>span{
+	font-size:22px;
+}
+.refer_doc>ul{
+	list-style-type:decimal;
+	margin-top:20px;
+	padding:10px;
+	width:700px;
+	border-top:2px solid #ccc;
+	border-bottom:2px solid #ccc;
+	color:#aaa;
+	font-size:14px;
+}
+.refer_doc>ul>li>a{
+	color:#666;
+	text-decoration:none;
+}
+.refer_doc>ul>li>a:hover{
+	text-decoration:underline;
+}
+.refer_doc>ul>li>a>i{
+	padding:1px 10px;
+	background:url(../images/return.gif) no-repeat right 6px;
+}
+
+/**********************foot****************************/
+.foot{
+	width:100%;
+	background:#eee;
+	text-align:center;
+	line-height:3em;
+	color:brown;
+	font-weight:bold;
+}
+.foot>div>span:not([id]){
+	margin-left:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
